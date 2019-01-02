@@ -28,4 +28,3 @@ test=sigmoid([1,5.1,3.5,1.4,0.2]*all_theta(1,:)');
 fprintf('\nTesting with the first test case:\n');
 fprintf('%f percent probability of case 1\n',test*100);
 fprintf('\nProgram paused. Press enter to continue.\n');
-pause;

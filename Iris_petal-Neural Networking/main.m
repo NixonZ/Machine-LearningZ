@@ -1,0 +1,19 @@
+clear; close all; clc
+
+data=load('iris.data.txt');
+X=data(:,1:4);
+y=data(:,5);
+Theta1=zeros(5,5);
+Theta2=zeros(5,6);
+Theta3=zeros(3,6);
+
+input_layer_size  = 4;
+hidden_layer1_size= 5;
+hidden_layer1_size= 5;
+num_labels = 3;
+
+% Unroll parameters 
+nn_params = [Theta1(:) ; Theta2(:); Theta3(:)];
+
+% Calculate Cost
+J = nnCostFunction(nn_params, input_layer1_size,input_layer2_size, hidden_layer_size,num_labels, X, y, lambda);
