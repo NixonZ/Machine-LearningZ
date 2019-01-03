@@ -1,0 +1,14 @@
+function p=predict(Theta1,Theta2,Theta3,X)
+m=size(X,1);
+a1=X;
+a1=[ones(m,1),a1];
+a2=sigmoid(a1*);
+a2=[ones(1,1);a2];
+z3=Theta1*a2;
+a3=sigmoid(z3);
+a3=[ones(1,1);a3];
+z4=Theta1*a3;
+predictions=sigmoid(z4);
+[temp p]=max(predictions,[],2);
+end
+
